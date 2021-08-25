@@ -8,5 +8,6 @@ for i in f:
 X = np.array(X)
 f.close()
 print(X)
-
-nice = sklearn.cluster.KMeans(3).fit(X)
+from sklearn.cluster import KMeans
+result = KMeans(3).fit_predict(X)
+print(result)
